@@ -1,0 +1,59 @@
+.map {
+  --sticker-shadow: var(--shadow-sticker-on-color);
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  background: var(--pastel-lavanda);
+  border: var(--border-width) solid var(--on-color);
+  border-radius: var(--radius-scoop);
+  box-shadow: var(--shadow-sticker);
+}
+
+.svg {
+  width: 100%;
+  height: auto;
+}
+
+.block,
+.park,
+.here {
+  stroke: var(--on-color);
+  stroke-width: 3;
+}
+
+.block {
+  fill: var(--surface-raised);
+}
+
+.park {
+  fill: var(--pastel-pistacho);
+}
+
+.here {
+  fill: var(--pastel-vainilla);
+}
+
+.pin {
+  fill: var(--neon-pink);
+  stroke: var(--on-color);
+  stroke-width: 3;
+}
+
+.pinDot {
+  fill: var(--surface-raised);
+  stroke: var(--on-color);
+  stroke-width: 3;
+}
+
+.sticker {
+  position: absolute;
+  top: var(--space-4);
+  left: var(--space-4);
+}
+
+.caption {
+  padding: var(--space-2) var(--space-4);
+  background: var(--pastel-vainilla);
+  color: var(--on-color);
+  border-top: var(--border-width) solid var(--on-color);
+}

@@ -83,6 +83,10 @@ export class JsonStoryRepository implements StoryRepository {
       .map(({ s }) => s);
   }
 
+  async listByFlavor(slug: string): Promise<Story[]> {
+    return this.stories.filter((s) => s.relatedFlavors.includes(slug));
+  }
+
   async listSnaps(): Promise<Snap[]> {
     return this.snaps;
   }

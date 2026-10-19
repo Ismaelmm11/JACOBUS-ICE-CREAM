@@ -16,7 +16,9 @@
   display: none;
 }
 
+/* relative: ancla el texto oculto (.visually-hidden) para que no ensanche la página. */
 .bubble {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;

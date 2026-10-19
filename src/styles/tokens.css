@@ -59,6 +59,9 @@
   --text-heading-leading: 1.111;
   --text-heading-tracking: -0.01em;
 
+  /* heading en contenedores estrechos (sidebars): mismo estilo, menos tamaño */
+  --text-heading-compact-size: 26px;
+
   /* title — Unbounded 700 */
   --text-title-family: var(--font-family-display);
   --text-title-weight: 700;

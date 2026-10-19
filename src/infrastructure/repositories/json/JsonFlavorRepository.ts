@@ -96,6 +96,17 @@ export class JsonFlavorRepository implements FlavorRepository {
     return [...this.flavors].sort((a, b) => b.addedOn.localeCompare(a.addedOn))[0] ?? null;
   }
 
+  async listPairings(flavor: Flavor, limit: number): Promise<Flavor[]> {
+    return FAMILY_ORDER.filter((family) => family !== flavor.family)
+      .map((family) =>
+        this.flavors
+          .filter((f) => f.family === family && f.stock !== "agotado")
+          .sort((a, b) => b.weeklyOrders - a.weeklyOrders)[0],
+      )
+      .filter((f): f is Flavor => f !== undefined)
+      .slice(0, limit);
+  }
+
   async listByFamily(family: FlavorFamily): Promise<Flavor[]> {
     return this.flavors.filter((f) => f.family === family);
   }

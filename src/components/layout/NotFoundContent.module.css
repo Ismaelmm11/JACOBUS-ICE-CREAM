@@ -1,0 +1,46 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  max-width: var(--reading-max);
+  margin: 0 auto;
+  padding: var(--space-12) var(--space-4);
+  text-align: center;
+}
+
+.art {
+  position: relative;
+  display: grid;
+  place-items: center;
+  margin-bottom: var(--space-6);
+}
+
+/* La bola «derretida»: aplastada y caída de lado. */
+.scoop {
+  width: 160px;
+  transform: scaleY(0.7) rotate(-8deg);
+}
+
+.sticker {
+  position: absolute;
+  bottom: calc(var(--space-4) * -1);
+}
+
+.text {
+  max-width: 44ch;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scoop {
+    transform: scaleY(0.7);
+  }
+}

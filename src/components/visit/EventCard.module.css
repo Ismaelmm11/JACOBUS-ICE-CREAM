@@ -1,0 +1,45 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-2);
+  height: 100%;
+  padding: var(--space-4);
+  color: var(--on-color);
+  border: var(--border-width) solid var(--on-color);
+  border-radius: var(--radius-scoop);
+  box-shadow: var(--shadow-sticker);
+}
+
+.frutales {
+  background: var(--family-frutales);
+}
+
+.frutos-secos {
+  background: var(--family-frutos-secos);
+}
+
+.cremas {
+  background: var(--family-cremas);
+}
+
+.chocolate {
+  background: var(--family-chocolate);
+}
+
+.date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 80px;
+  margin-bottom: var(--space-2);
+  padding: var(--space-2);
+  background: var(--surface-raised);
+  color: var(--ink);
+  border: var(--border-width) solid var(--on-color);
+  border-radius: var(--radius-sharp);
+}
+
+.day {
+  line-height: var(--text-heading-leading);
+}

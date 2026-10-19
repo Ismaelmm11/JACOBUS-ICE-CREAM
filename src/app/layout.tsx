@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import { fontVariables } from "@/styles/fonts";
 import { themeInitScript } from "@/lib/theme";
 import "@/styles/globals.css";
@@ -19,10 +20,11 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es" className={fontVariables} suppressHydrationWarning>
-      <head>
-        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
-      </head>
       <body>
+        {/* Aplica el tema guardado antes del primer pintado (sin parpadeo). */}
+        <Script id="theme-init" strategy="beforeInteractive">
+          {themeInitScript}
+        </Script>
         <a className="skip-link" href="#contenido">
           Saltar al contenido
         </a>

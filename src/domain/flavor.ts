@@ -7,6 +7,13 @@ export const FAMILY_LABELS: Record<FlavorFamily, string> = {
   chocolate: "Chocolate y especiales",
 };
 
+export const FAMILY_DESCRIPTIONS: Record<FlavorFamily, string> = {
+  frutales: "Fruta de verdad, triturada por la mañana. Casi todos son veganos y ninguno lleva colorantes.",
+  "frutos-secos": "Tostamos y molemos en casa. Lo verde es verde porque es pistacho, no porque venga de un bote.",
+  cremas: "Leche, nata y recetas de abuela. Los que piden repetir sin mirar la carta.",
+  chocolate: "Cacao en serio y los raros de la casa. Aquí vive el regaliz negro, avisado quedas.",
+};
+
 export const FAMILY_ORDER: readonly FlavorFamily[] = ["frutales", "frutos-secos", "cremas", "chocolate"];
 
 export type StockStatus = "disponible" | "queda-poco" | "recien-hecho" | "agotado";

@@ -37,3 +37,10 @@ export function dateParts(iso: string): { day: string; month: string; weekday: s
     weekday: weekdayDate.format(date).replace(".", ""),
   };
 }
+
+const monthYear = new Intl.DateTimeFormat("es-ES", { month: "short", year: "numeric", timeZone: "UTC" });
+
+/** «oct 2026» */
+export function formatMonthYear(iso: string): string {
+  return monthYear.format(parseIsoDate(iso)).replace(".", "");
+}

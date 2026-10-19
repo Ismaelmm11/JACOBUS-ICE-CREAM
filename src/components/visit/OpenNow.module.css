@@ -1,0 +1,37 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-4);
+  padding: var(--space-6);
+  background: var(--pastel-pistacho);
+  color: var(--on-color);
+  border: var(--border-width) solid var(--on-color);
+  border-radius: var(--radius-scoop);
+  box-shadow: var(--shadow-sticker);
+}
+
+/* Badge tipo «LIVE» de NBA. ABIERTO es el único neon-lime de la página. */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-2);
+  color: var(--on-color);
+  border: var(--border-width) solid var(--on-color);
+  border-radius: var(--radius-sharp);
+}
+
+.open {
+  background: var(--neon-lime);
+}
+
+.closed {
+  background: var(--surface-raised);
+  color: var(--ink);
+  border-color: var(--ink);
+}
+
+.answer {
+  color: var(--on-color);
+}

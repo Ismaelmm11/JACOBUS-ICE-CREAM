@@ -39,3 +39,19 @@ export function openStatus(hours: DayHours[], timezone: string, now = new Date()
   if (next) return { open: false, detail: `Abre a las ${next.opens}` };
   return { open: false, detail: ranges.length ? "Hoy ya hemos cerrado" : "Hoy no abrimos" };
 }
+
+/** Fecha de hoy («AAAA-MM-DD») en la zona horaria de la tienda. */
+export function storeTodayIso(timezone: string, now = new Date()): string {
+  return new Intl.DateTimeFormat("en-CA", { timeZone: timezone }).format(now);
+}
+
+/** Suma días a una fecha «AAAA-MM-DD» sin pasar por la zona horaria local. */
+export function addDaysIso(iso: string, days: number): string {
+  const date = new Date(`${iso}T00:00:00Z`);
+  date.setUTCDate(date.getUTCDate() + days);
+  return date.toISOString().slice(0, 10);
+}
+
+export function weekdayOfIso(iso: string): Weekday {
+  return new Date(`${iso}T00:00:00Z`).getUTCDay() as Weekday;
+}

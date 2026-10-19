@@ -15,6 +15,8 @@ export interface FlavorRepository {
   listMostOrdered(limit: number): Promise<Flavor[]>;
   /** El sabor dado de alta más recientemente (lleva el sticker «Nuevo»). */
   getNewest(): Promise<Flavor | null>;
+  /** Sabores que combinan: el más pedido de cada una de las otras familias. */
+  listPairings(flavor: Flavor, limit: number): Promise<Flavor[]>;
 }
 
 export interface ScheduleRepository {
@@ -32,5 +34,6 @@ export interface StoryRepository {
   listFeatured(): Promise<Story[]>;
   listByCategory(category: StoryCategory): Promise<Story[]>;
   listRelated(story: Story, limit: number): Promise<Story[]>;
+  listByFlavor(slug: string): Promise<Story[]>;
   listSnaps(): Promise<Snap[]>;
 }

@@ -1,4 +1,5 @@
 .card {
+  container-type: inline-size;
   min-width: 0;
   padding: var(--space-4);
   background: var(--surface-raised);
@@ -37,5 +38,12 @@
 @media (min-width: 768px) {
   .card {
     padding: var(--space-6);
+  }
+}
+
+/* En una sidebar estrecha el título en heading no cabe: se compacta. */
+@container (max-width: 320px) {
+  .header > :first-child {
+    font-size: var(--text-heading-compact-size);
   }
 }
