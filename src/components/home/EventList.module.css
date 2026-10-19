@@ -1,0 +1,56 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: 0;
+  list-style: none;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 80px minmax(0, 1fr);
+  gap: var(--space-4);
+  align-items: start;
+}
+
+.date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-2) 0;
+  color: var(--on-color);
+  border: var(--border);
+  border-radius: var(--radius-sharp);
+  box-shadow: var(--shadow-sticker);
+}
+
+.day {
+  font-size: var(--text-heading-size);
+  line-height: var(--text-heading-leading);
+}
+
+.frutales {
+  background: var(--family-frutales);
+}
+
+.frutos-secos {
+  background: var(--family-frutos-secos);
+}
+
+.cremas {
+  background: var(--family-cremas);
+}
+
+.chocolate {
+  background: var(--family-chocolate);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.summary {
+  color: var(--ink-muted);
+}

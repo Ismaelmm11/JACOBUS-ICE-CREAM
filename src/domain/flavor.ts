@@ -65,6 +65,8 @@ export interface Flavor {
   lactoseFree: boolean;
   glutenFree: boolean;
   stock: StockStatus;
+  /** Pedidos en la última semana (mock): ordena «Lo más pedido». */
+  weeklyOrders: number;
   /** Fecha de alta en ISO (AAAA-MM-DD) */
   addedOn: string;
 }

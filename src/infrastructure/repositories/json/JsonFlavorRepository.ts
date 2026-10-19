@@ -61,6 +61,7 @@ function parseFlavor(raw: unknown, index: number): Flavor {
     lactoseFree: assertBoolean(r.lactoseFree, `${p}.lactoseFree`),
     glutenFree: assertBoolean(r.glutenFree, `${p}.glutenFree`),
     stock: assertOneOf(r.stock, STOCK, `${p}.stock`),
+    weeklyOrders: assertNumber(r.weeklyOrders, `${p}.weeklyOrders`),
     addedOn,
   };
 }
@@ -85,6 +86,14 @@ export class JsonFlavorRepository implements FlavorRepository {
 
   async getBySlug(slug: string): Promise<Flavor | null> {
     return this.bySlug.get(slug) ?? null;
+  }
+
+  async listMostOrdered(limit: number): Promise<Flavor[]> {
+    return [...this.flavors].sort((a, b) => b.weeklyOrders - a.weeklyOrders).slice(0, limit);
+  }
+
+  async getNewest(): Promise<Flavor | null> {
+    return [...this.flavors].sort((a, b) => b.addedOn.localeCompare(a.addedOn))[0] ?? null;
   }
 
   async listByFamily(family: FlavorFamily): Promise<Flavor[]> {

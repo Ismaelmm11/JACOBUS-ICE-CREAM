@@ -1,8 +1,9 @@
 import type { FlavorFamily } from "@/domain/flavor";
+import type { IllustrationKind } from "@/domain/story";
 import { cx } from "@/lib/cx";
 import styles from "./IceCream.module.css";
 
-export type IceCreamKind = "bola" | "tarrina" | "cucurucho";
+export type IceCreamKind = IllustrationKind;
 
 interface IceCreamProps {
   kind?: IceCreamKind;

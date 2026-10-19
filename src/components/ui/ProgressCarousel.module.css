@@ -85,7 +85,7 @@
 .art {
   display: grid;
   place-items: center;
-  max-width: 200px;
+  max-width: 120px;
   justify-self: center;
 }
 

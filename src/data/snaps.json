@@ -1,0 +1,70 @@
+[
+  {
+    "id": "recien-hecho",
+    "label": "Recién hecho",
+    "family": "frutales",
+    "art": "cucurucho",
+    "frames": [
+      { "text": "Fresa de la huerta, recién salida de la mantecadora.", "sticker": "¡Recién hecho!" },
+      { "text": "Si ves el cartel, es de esta mañana. Si no lo ves, también está bueno.", "sticker": null }
+    ],
+    "cta": { "label": "Ver la fresa", "href": "/sabores/fresa-de-la-huerta" }
+  },
+  {
+    "id": "mango-picante",
+    "label": "Mango picante",
+    "family": "frutales",
+    "art": "bola",
+    "frames": [
+      { "text": "Mango Kent, lima y un pellizco de chile.", "sticker": "Pica" },
+      { "text": "Pica al final, no al principio. Prometido.", "sticker": null },
+      { "text": "Vegano y sin lactosa. Solo mientras dure el mango bueno.", "sticker": null }
+    ],
+    "cta": { "label": "Pruébalo", "href": "/sabores/mango-picante" }
+  },
+  {
+    "id": "pistacho",
+    "label": "Cata pistacho",
+    "family": "frutos-secos",
+    "art": "tarrina",
+    "frames": [
+      { "text": "Tres pistachos sin nombre. Uno se queda en la vitrina.", "sticker": "A ciegas" },
+      { "text": "Sábado 24 de octubre, de 18:00 a 20:00.", "sticker": null }
+    ],
+    "cta": { "label": "Ver el evento", "href": "/historias/sabado-de-pistacho" }
+  },
+  {
+    "id": "turron",
+    "label": "Turrón",
+    "family": "cremas",
+    "art": "tarrina",
+    "frames": [
+      { "text": "Sí, es octubre. Sí, ya hay turrón.", "sticker": "Temporada" },
+      { "text": "Tarrinas de litro para quedar bien en la cena.", "sticker": null }
+    ],
+    "cta": { "label": "Ver el turrón", "href": "/sabores/turron-de-jijona" }
+  },
+  {
+    "id": "obrador",
+    "label": "Obrador",
+    "family": "cremas",
+    "art": "bola",
+    "frames": [
+      { "text": "7:00. Huele a fresa y a café.", "sticker": null },
+      { "text": "12:00. La mantecadora no para.", "sticker": "A tope" },
+      { "text": "16:30. Abrimos la persiana.", "sticker": null }
+    ],
+    "cta": { "label": "Leer el reportaje", "href": "/historias/una-manana-en-el-obrador" }
+  },
+  {
+    "id": "raros",
+    "label": "Sabores raros",
+    "family": "chocolate",
+    "art": "cucurucho",
+    "frames": [
+      { "text": "Regaliz negro. O lo amas o lo odias.", "sticker": "Raro" },
+      { "text": "31 de octubre: noche de sabores raros. Ven disfrazado.", "sticker": null }
+    ],
+    "cta": { "label": "Ver el evento", "href": "/historias/noche-de-sabores-raros" }
+  }
+]

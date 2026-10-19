@@ -1,5 +1,6 @@
 import type { Flavor, FlavorFamily } from "./flavor";
 import type { ContactInfo, DayHours, Showcase, StoreEvent } from "./schedule";
+import type { Snap, Story, StoryCategory } from "./story";
 
 /**
  * Contratos de acceso a datos. Los componentes solo conocen estas interfaces;
@@ -11,6 +12,9 @@ export interface FlavorRepository {
   getBySlug(slug: string): Promise<Flavor | null>;
   listByFamily(family: FlavorFamily): Promise<Flavor[]>;
   listBySlugs(slugs: readonly string[]): Promise<Flavor[]>;
+  listMostOrdered(limit: number): Promise<Flavor[]>;
+  /** El sabor dado de alta más recientemente (lleva el sticker «Nuevo»). */
+  getNewest(): Promise<Flavor | null>;
 }
 
 export interface ScheduleRepository {
@@ -19,4 +23,14 @@ export interface ScheduleRepository {
   getShowcase(): Promise<Showcase>;
   listUpcomingEvents(from: Date): Promise<StoreEvent[]>;
   getTimezone(): Promise<string>;
+}
+
+export interface StoryRepository {
+  /** Más recientes primero. */
+  list(): Promise<Story[]>;
+  getBySlug(slug: string): Promise<Story | null>;
+  listFeatured(): Promise<Story[]>;
+  listByCategory(category: StoryCategory): Promise<Story[]>;
+  listRelated(story: Story, limit: number): Promise<Story[]>;
+  listSnaps(): Promise<Snap[]>;
 }

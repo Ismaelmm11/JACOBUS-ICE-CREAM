@@ -1,0 +1,66 @@
+.rail {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  min-width: 0;
+}
+
+.controls {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-4);
+}
+
+/* Flechas en sticker: neón, esquinas rectas, borde y sombra dura, un poco torcidas. */
+.arrow {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  background: var(--neon-pink);
+  color: var(--on-color);
+  border: var(--border-width) solid var(--on-color);
+  border-radius: var(--radius-sharp);
+  box-shadow: var(--shadow-sticker);
+  font-size: var(--text-title-size);
+  transform: rotate(var(--sticker-rotation));
+  transition:
+    transform var(--duration-fast) var(--ease-out),
+    box-shadow var(--duration-fast) var(--ease-out);
+}
+
+.arrow:active {
+  box-shadow: var(--shadow-none);
+  transform: var(--press-offset) rotate(var(--sticker-rotation));
+}
+
+.arrow:focus-visible {
+  box-shadow: var(--focus-halo), var(--shadow-sticker);
+}
+
+.arrow:disabled {
+  background: var(--surface-raised);
+  color: var(--ink-muted);
+  border-color: var(--ink-muted);
+  box-shadow: var(--shadow-none);
+  cursor: not-allowed;
+}
+
+/* Hueco para que la sombra grande y el «lift» del hover no queden recortados. */
+.swiper {
+  width: 100%;
+  margin: calc(var(--space-2) * -1) 0;
+  padding: var(--space-2) var(--space-2) var(--space-4) var(--space-1);
+}
+
+.slide {
+  height: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .arrow,
+  .arrow:active {
+    transform: none;
+  }
+}

@@ -1,0 +1,46 @@
+.strip {
+  --button-shadow: var(--shadow-sticker-on-color);
+  --sticker-shadow: var(--shadow-sticker-on-color);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-4);
+  padding: var(--space-6);
+  background: var(--pastel-vainilla);
+  color: var(--on-color);
+  border: var(--border-width) solid var(--on-color);
+  border-radius: var(--radius-sharp);
+}
+
+/* En móvil el sticker puede partirse en dos líneas para no salirse al girar. */
+.sticker {
+  max-width: calc(100% - var(--space-2));
+  white-space: normal;
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  max-width: 56ch;
+}
+
+.title {
+  color: var(--on-color);
+}
+
+@media (min-width: 768px) {
+  .strip {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-6);
+  }
+
+  .sticker {
+    flex: none;
+  }
+
+  .cta {
+    margin-left: auto;
+  }
+}
