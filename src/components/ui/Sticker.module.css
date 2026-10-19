@@ -1,0 +1,57 @@
+.sticker {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-2);
+  border: var(--border-width) solid var(--on-color);
+  border-radius: var(--radius-sharp);
+  color: var(--on-color);
+  white-space: nowrap;
+  transform: rotate(var(--sticker-rotation));
+}
+
+/* --sticker-shadow permite al contenedor cambiar la sombra (p. ej. sobre el footer oscuro). */
+.spray {
+  padding: var(--space-2) var(--space-4);
+  box-shadow: var(--sticker-shadow, var(--shadow-sticker));
+}
+
+.pink {
+  background: var(--neon-pink);
+}
+
+.lime {
+  background: var(--neon-lime);
+}
+
+.cyan {
+  background: var(--neon-cyan);
+}
+
+.fresa {
+  background: var(--pastel-fresa);
+}
+
+.pistacho {
+  background: var(--pastel-pistacho);
+}
+
+.vainilla {
+  background: var(--pastel-vainilla);
+}
+
+.lavanda {
+  background: var(--pastel-lavanda);
+}
+
+.raised {
+  background: var(--surface-raised);
+  color: var(--ink);
+  border-color: var(--ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sticker {
+    transform: none;
+  }
+}

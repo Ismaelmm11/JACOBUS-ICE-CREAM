@@ -1,0 +1,10 @@
+.placeholder {
+  display: grid;
+  justify-items: start;
+  align-content: start;
+  gap: var(--space-6);
+  max-width: var(--content-max);
+  min-height: 120vh;
+  margin: 0 auto;
+  padding: var(--space-12) var(--space-4);
+}

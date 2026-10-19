@@ -1,0 +1,176 @@
+.ticker {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: stretch;
+  background: var(--surface-raised);
+  border-bottom: var(--border);
+}
+
+.track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  scrollbar-width: none;
+  overscroll-behavior-x: contain;
+}
+
+.track::-webkit-scrollbar {
+  display: none;
+}
+
+.group {
+  display: flex;
+  flex: none;
+}
+
+/* Separador por día, como THU / FRI en el scoreboard. */
+.day {
+  display: flex;
+  align-items: center;
+  padding: 0 var(--space-4);
+  background: var(--ink);
+  color: var(--surface);
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  scroll-snap-align: start;
+}
+
+.list {
+  display: flex;
+  padding: 0;
+  list-style: none;
+}
+
+.item {
+  flex: none;
+  scroll-snap-align: start;
+  border-right: 1px solid var(--ink-muted);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  width: 216px;
+  height: 100%;
+  padding: var(--space-2) var(--space-4);
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.card:hover {
+  background: var(--surface);
+}
+
+.card:focus-visible {
+  outline-offset: calc(var(--focus-width) * -1);
+  box-shadow: none;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  color: var(--ink-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dot {
+  flex: none;
+  width: 10px;
+  height: 10px;
+  border: 2px solid var(--ink);
+  border-radius: var(--radius-pill);
+}
+
+.frutales {
+  background: var(--family-frutales);
+}
+
+.frutos-secos {
+  background: var(--family-frutos-secos);
+}
+
+.cremas {
+  background: var(--family-cremas);
+}
+
+.chocolate {
+  background: var(--family-chocolate);
+}
+
+.name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.status {
+  padding: 0 var(--space-1);
+  border: 2px solid var(--on-color);
+  border-radius: var(--radius-sharp);
+  color: var(--on-color);
+  white-space: nowrap;
+}
+
+.queda-poco {
+  background: var(--neon-pink);
+}
+
+.recien-hecho {
+  background: var(--pastel-pistacho);
+}
+
+.agotado {
+  background: var(--surface-raised);
+  border-color: var(--ink);
+  color: var(--ink);
+}
+
+.soldOut .name,
+.soldOut .price {
+  color: var(--ink-muted);
+  text-decoration: line-through;
+}
+
+.arrow {
+  display: none;
+  width: 44px;
+  background: var(--surface-raised);
+  border: 0;
+  color: var(--ink);
+  font-size: var(--text-title-size);
+}
+
+.prev {
+  border-right: var(--border);
+}
+
+.next {
+  border-left: var(--border);
+}
+
+.arrow:hover {
+  background: var(--neon-pink);
+  color: var(--on-color);
+}
+
+.arrow:focus-visible {
+  outline-offset: calc(var(--focus-width) * -1);
+  box-shadow: none;
+}
+
+@media (min-width: 768px) {
+  .arrow {
+    display: block;
+  }
+}

@@ -1,0 +1,185 @@
+.carousel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  min-width: 0;
+}
+
+/* Hueco para que la shadow-sticker no quede recortada por overflow:hidden de Swiper */
+.swiper {
+  width: 100%;
+  padding: 0 var(--space-2) var(--space-2) 0;
+}
+
+.slideWrap {
+  height: auto;
+}
+
+.slide {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-4);
+  height: 100%;
+  padding: var(--space-6);
+  color: var(--on-color);
+  border: var(--border);
+  border-radius: var(--radius-scoop);
+  box-shadow: var(--shadow-sticker);
+}
+
+.frutales {
+  background: var(--family-frutales);
+}
+
+.frutos-secos {
+  background: var(--family-frutos-secos);
+}
+
+.cremas {
+  background: var(--family-cremas);
+}
+
+.chocolate {
+  background: var(--family-chocolate);
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-4);
+}
+
+.kicker {
+  align-self: flex-start;
+}
+
+.title {
+  color: var(--on-color);
+}
+
+.text {
+  max-width: 48ch;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 44px;
+  margin-top: auto;
+  padding: var(--space-2) var(--space-6);
+  background: var(--neon-pink);
+  color: var(--on-color);
+  border: var(--border-width) solid var(--on-color);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-sticker-on-color);
+  text-decoration: none;
+}
+
+.cta:active {
+  box-shadow: var(--shadow-none);
+  transform: var(--press-offset);
+}
+
+.art {
+  display: grid;
+  place-items: center;
+  max-width: 200px;
+  justify-self: center;
+}
+
+.controls {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+}
+
+.bars {
+  display: grid;
+  flex: 1;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr);
+  gap: var(--space-2);
+  padding: 0;
+  list-style: none;
+}
+
+.barItem {
+  min-width: 0;
+}
+
+.barButton {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  width: 100%;
+  min-height: 44px;
+  padding: var(--space-2) 0;
+  background: none;
+  border: 0;
+  color: var(--ink-muted);
+  text-align: start;
+}
+
+.barButton:hover,
+.barActive {
+  color: var(--ink);
+}
+
+.track {
+  position: relative;
+  display: block;
+  height: 8px;
+  overflow: hidden;
+  background: var(--surface-raised);
+  border: 2px solid var(--ink);
+  border-radius: var(--radius-pill);
+}
+
+.track::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--neon-pink);
+  transform-origin: left center;
+  transform: scaleX(var(--progress, 0));
+}
+
+.barLabel {
+  display: none;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.play {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  background: var(--surface-raised);
+  color: var(--ink);
+  border: var(--border);
+  border-radius: var(--radius-pill);
+}
+
+@media (min-width: 640px) {
+  .slide {
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+    align-items: center;
+    min-height: 360px;
+    padding: var(--space-12) var(--space-6);
+  }
+
+  .art {
+    max-width: 260px;
+  }
+}
+
+@media (min-width: 768px) {
+  .barLabel {
+    display: block;
+  }
+}

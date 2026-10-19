@@ -1,0 +1,54 @@
+.list {
+  display: flex;
+  gap: var(--space-6);
+  overflow-x: auto;
+  /* Divisor ink como sombra interior: overflow no recorta el subrayado activo. */
+  box-shadow: inset 0 calc(var(--border-width) * -1) 0 var(--ink);
+  scrollbar-width: none;
+}
+
+.list::-webkit-scrollbar {
+  display: none;
+}
+
+.tab {
+  position: relative;
+  flex: none;
+  min-height: 48px;
+  padding: var(--space-2) 0;
+  background: none;
+  border: 0;
+  color: var(--ink-muted);
+}
+
+.tab:hover {
+  color: var(--ink);
+}
+
+.tab[aria-selected="true"] {
+  color: var(--ink);
+}
+
+/* Subrayado activo neon-pink de 3px, montado sobre el divisor ink. */
+.tab[aria-selected="true"]::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: var(--border-width);
+  background: var(--neon-pink);
+}
+
+.tab:focus-visible {
+  outline-offset: calc(var(--focus-offset) * -1);
+  box-shadow: none;
+}
+
+.panel {
+  padding-top: var(--space-6);
+}
+
+.panel:focus-visible {
+  outline-offset: var(--focus-offset);
+}

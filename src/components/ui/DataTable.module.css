@@ -1,0 +1,124 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.scroller {
+  overflow-x: auto;
+  background: var(--surface-raised);
+  border: var(--border);
+  border-radius: var(--radius-scoop);
+  box-shadow: var(--shadow-sticker);
+}
+
+.scroller:focus-visible {
+  box-shadow: var(--focus-halo), var(--shadow-sticker);
+}
+
+.table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.th,
+.td {
+  padding: var(--space-2) var(--space-4);
+  text-align: start;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.th {
+  position: sticky;
+  top: 0;
+  background: var(--surface-raised);
+  border-bottom: var(--border);
+}
+
+.td {
+  border-bottom: 1px solid var(--ink-muted);
+}
+
+.row:last-child .td {
+  border-bottom: 0;
+}
+
+.row:hover .td {
+  background: var(--surface);
+}
+
+.end {
+  text-align: end;
+}
+
+.sticky {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  background: var(--surface-raised);
+  border-right: var(--border);
+}
+
+.th.sticky {
+  z-index: 2;
+}
+
+.sortButton {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  min-height: 40px;
+  padding: 0;
+  background: none;
+  border: 0;
+  color: var(--ink-muted);
+  text-transform: uppercase;
+}
+
+.sortButton:hover,
+.sorted {
+  color: var(--ink);
+}
+
+.sorted {
+  text-decoration: underline;
+  text-decoration-color: var(--neon-pink);
+  text-decoration-thickness: var(--border-width);
+  text-underline-offset: 6px;
+}
+
+.arrow {
+  display: inline-block;
+  width: 1.2em;
+  text-align: center;
+}
+
+.empty {
+  padding: var(--space-12) var(--space-4);
+  text-align: center;
+  color: var(--ink-muted);
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.pageButton {
+  min-height: 40px;
+  padding: var(--space-1) var(--space-4);
+  background: var(--surface-raised);
+  color: var(--ink);
+  border: var(--border);
+  border-radius: var(--radius-pill);
+}
+
+.pageButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
