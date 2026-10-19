@@ -1,0 +1,218 @@
+/*
+ * Jacobus Ice Cream — design tokens.
+ * Fuente de verdad única: ningún componente usa color, radio, sombra o fuente
+ * fuera de este archivo. Las familias tipográficas las inyecta next/font como
+ * --font-unbounded, --font-space-grotesk, --font-space-mono y --font-rubik-spray
+ * en <html>; aquí solo se les da nombre semántico.
+ */
+
+:root {
+  color-scheme: light;
+
+  /* ── Color · tema crema ─────────────────────────────── */
+  --surface: #fff8ee;
+  --surface-raised: #ffffff;
+  --ink: #1a0f1f;
+  --ink-muted: #5c4a63;
+  --on-color: #1a0f1f;
+
+  --neon-pink: #ff2e88;
+  --neon-lime: #c6ff1a;
+  --neon-cyan: #18e7ff;
+
+  --pastel-fresa: #ffc8dd;
+  --pastel-pistacho: #cdeec0;
+  --pastel-vainilla: #fff0b8;
+  --pastel-lavanda: #ddd0ff;
+
+  /* Marco de la web (header y footer): oscuro fijo en los dos temas. */
+  --chrome: #1a0f1f;
+  --on-chrome: #fff8ee;
+  --on-chrome-muted: #c9b8cf;
+
+  /* Familias de sabor → pastel */
+  --family-frutales: var(--pastel-fresa);
+  --family-frutos-secos: var(--pastel-pistacho);
+  --family-cremas: var(--pastel-vainilla);
+  --family-chocolate: var(--pastel-lavanda);
+
+  /* Color de la sombra sticker (ink en crema, neon-pink en noche) */
+  --shadow-color: #1a0f1f;
+
+  /* ── Tipografía ─────────────────────────────────────── */
+  --font-family-display: var(--font-unbounded), system-ui, sans-serif;
+  --font-family-body: var(--font-space-grotesk), system-ui, sans-serif;
+  --font-family-mono: var(--font-space-mono), ui-monospace, monospace;
+  --font-family-sticker: var(--font-rubik-spray), var(--font-unbounded), system-ui, sans-serif;
+
+  /* display — Unbounded 900, una vez por pantalla */
+  --text-display-family: var(--font-family-display);
+  --text-display-weight: 900;
+  --text-display-size: clamp(40px, 6vw + 16px, 72px);
+  --text-display-leading: 0.95;
+  --text-display-tracking: -0.02em;
+
+  /* heading — Unbounded 800 */
+  --text-heading-family: var(--font-family-display);
+  --text-heading-weight: 800;
+  --text-heading-size: clamp(26px, 2.5vw + 14px, 36px);
+  --text-heading-leading: 1.111;
+  --text-heading-tracking: -0.01em;
+
+  /* heading en contenedores estrechos (sidebars): mismo estilo, menos tamaño */
+  --text-heading-compact-size: 26px;
+
+  /* title — Unbounded 700 */
+  --text-title-family: var(--font-family-display);
+  --text-title-weight: 700;
+  --text-title-size: 20px;
+  --text-title-leading: 24px;
+  --text-title-tracking: 0;
+
+  /* body / body-strong — Space Grotesk */
+  --text-body-family: var(--font-family-body);
+  --text-body-weight: 400;
+  --text-body-strong-weight: 700;
+  --text-body-size: 16px;
+  --text-body-leading: 24px;
+
+  /* label — Space Grotesk 700, mayúsculas */
+  --text-label-family: var(--font-family-body);
+  --text-label-weight: 700;
+  --text-label-size: 13px;
+  --text-label-leading: 16px;
+  --text-label-tracking: 0.08em;
+
+  /* price — Space Mono 700 */
+  --text-price-family: var(--font-family-mono);
+  --text-price-weight: 700;
+  --text-price-size: 18px;
+  --text-price-leading: 24px;
+
+  /* logo compuesto — Unbounded 900 en dos líneas */
+  --text-logo-size: 20px;
+  --text-logo-sub-size: 9.5px;
+  --text-logo-sub-tracking: 0.42em;
+
+  /* sticker — Rubik Spray Paint, solo ≥28px */
+  --text-sticker-family: var(--font-family-sticker);
+  --text-sticker-weight: 400;
+  --text-sticker-size: 32px;
+  --text-sticker-leading: 36px;
+
+  /* ── Espaciado ──────────────────────────────────────── */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-4: 16px;
+  --space-6: 24px; /* gutter */
+  --space-12: 48px; /* entre secciones */
+
+  /* ── Forma ──────────────────────────────────────────── */
+  --radius-sharp: 0;
+  --radius-scoop: 20px;
+  --radius-pill: 999px;
+
+  --border-width: 3px;
+
+  /* ── Foco ───────────────────────────────────────────── */
+  --focus-width: 3px;
+  --focus-offset: 2px;
+  --focus-color: var(--neon-cyan);
+
+  /* ── Elevación ──────────────────────────────────────── */
+  --shadow-none: 0 0 0 transparent;
+  --press-offset: translate(4px, 4px);
+  --lift-offset: translate(-2px, -2px);
+
+  /* ── Layout ─────────────────────────────────────────── */
+  --container-max: 1440px;
+  --content-max: 1080px;
+  --reading-max: 720px;
+  --header-height: 64px;
+
+  /* ── Movimiento ─────────────────────────────────────── */
+  --duration-fast: 120ms;
+  --duration-base: 200ms;
+  --duration-slow: 320ms;
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --carousel-interval: 6000ms;
+
+  /* ── Capas ──────────────────────────────────────────── */
+  --z-sticky: 50;
+  --z-header: 100;
+  --z-menu: 200;
+  --z-overlay: 300;
+}
+
+/*
+ * Tokens derivados: se recalculan en cada elemento con data-theme para que un
+ * contenedor anidado (p. ej. la vista lado a lado de /design) herede bien el borde,
+ * las sombras y el halo de foco de su tema y no los del <html>.
+ */
+:root,
+[data-theme] {
+  --border: var(--border-width) solid var(--ink);
+  /* Para lo que vive DENTRO de un pastel o neón: on-color en los dos temas.
+     Los contenedores pastel hacen  --border: var(--border-on-color)  y dibujan
+     su propio borde exterior con ink. */
+  --border-on-color: var(--border-width) solid var(--on-color);
+
+  --shadow-sticker: 4px 4px 0 var(--shadow-color);
+  --shadow-sticker-lg: 8px 8px 0 var(--shadow-color);
+  /* Sombra para piezas que viven SOBRE un pastel o neón: siempre on-color,
+     porque en noche la sombra neon-pink desaparecería bajo un botón neon-pink. */
+  --shadow-sticker-on-color: 4px 4px 0 var(--on-color);
+  /* Sobre el header/footer oscuro: sombra en el color claro del marco. */
+  --shadow-sticker-on-chrome: 4px 4px 0 var(--on-chrome);
+
+  /* El cian solo no llega a 3:1 sobre crema: se encierra entre dos anillos ink
+     (2px por dentro, 2px por fuera) para que el indicador cumpla en ambos temas. */
+  --focus-halo: 0 0 0 calc(var(--focus-offset) + var(--focus-width) + 2px) var(--ink);
+  /* Sobre pastel o neón el ink de noche es claro y no contrasta: halo en on-color.
+     Los contenedores pastel hacen  --focus-halo: var(--focus-halo-on-color). */
+  --focus-halo-on-color: 0 0 0 calc(var(--focus-offset) + var(--focus-width) + 2px) var(--on-color);
+  /* Anillo hacia dentro (tabs, ticker): cian encima y 2px de ink por dentro. */
+  --focus-halo-inset: inset 0 0 0 calc(var(--focus-width) + 2px) var(--ink);
+}
+
+/* ── Tema crema explícito (para forzarlo o anidarlo dentro de noche) ── */
+[data-theme="crema"] {
+  color-scheme: light;
+  --surface: #fff8ee;
+  --surface-raised: #ffffff;
+  --ink: #1a0f1f;
+  --ink-muted: #5c4a63;
+  --shadow-color: #1a0f1f;
+}
+
+/* ── Tema noche ───────────────────────────────────────── */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="crema"]) {
+    color-scheme: dark;
+    --surface: #140b18;
+    --surface-raised: #22142a;
+    --ink: #fff4fb;
+    --ink-muted: #c9b8cf;
+    --shadow-color: #ff2e88;
+  }
+}
+
+[data-theme="noche"] {
+  color-scheme: dark;
+  --surface: #140b18;
+  --surface-raised: #22142a;
+  --ink: #fff4fb;
+  --ink-muted: #c9b8cf;
+  --shadow-color: #ff2e88;
+}
+
+/* ── Movimiento reducido ──────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 0ms;
+    --duration-base: 0ms;
+    --duration-slow: 0ms;
+    --press-offset: none;
+    --lift-offset: none;
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "timezone": "Europe/Madrid",
+  "contact": {
+    "address": "TODO: dirección del local",
+    "city": "Elda (Alicante)",
+    "phone": "TODO: teléfono",
+    "email": "TODO: email",
+    "social": [
+      { "network": "Instagram", "handle": "TODO", "url": null },
+      { "network": "TikTok", "handle": "TODO", "url": null },
+      { "network": "Google Maps", "handle": "TODO", "url": null }
+    ]
+  },
+  "weeklyHours": [
+    { "day": 1, "label": "Lunes", "ranges": [] },
+    { "day": 2, "label": "Martes", "ranges": [{ "opens": "16:30", "closes": "22:00" }] },
+    { "day": 3, "label": "Miércoles", "ranges": [{ "opens": "16:30", "closes": "22:00" }] },
+    { "day": 4, "label": "Jueves", "ranges": [{ "opens": "16:30", "closes": "22:30" }] },
+    { "day": 5, "label": "Viernes", "ranges": [{ "opens": "16:30", "closes": "23:30" }] },
+    { "day": 6, "label": "Sábado", "ranges": [{ "opens": "12:00", "closes": "14:30" }, { "opens": "16:30", "closes": "23:30" }] },
+    { "day": 0, "label": "Domingo", "ranges": [{ "opens": "12:00", "closes": "14:30" }, { "opens": "16:30", "closes": "22:00" }] }
+  ],
+  "showcase": {
+    "today": [
+      "mango-picante",
+      "turron-de-jijona",
+      "fresa-de-la-huerta",
+      "pistacho-tostado",
+      "te-matcha",
+      "arroz-con-leche",
+      "stracciatella",
+      "galleta-de-la-abuela",
+      "chocolate-con-sal",
+      "limon-y-albahaca",
+      "sandia-y-menta",
+      "chocolate-negro-70"
+    ],
+    "tomorrow": [
+      "frambuesa-silvestre",
+      "avellana-tostada",
+      "dulce-de-leche",
+      "regaliz-negro",
+      "aguacate-y-lima",
+      "vainilla-de-verdad"
+    ]
+  },
+  "events": [
+    {
+      "slug": "sabado-de-pistacho",
+      "title": "Sábado de pistacho",
+      "date": "2026-10-24",
+      "start": "18:00",
+      "end": "20:00",
+      "summary": "Tres pistachos, una votación a ciegas y cero vergüenza. El que gane se queda en la vitrina.",
+      "family": "frutos-secos"
+    },
+    {
+      "slug": "noche-de-sabores-raros",
+      "title": "Noche de sabores raros",
+      "date": "2026-10-31",
+      "start": "20:00",
+      "end": "23:00",
+      "summary": "Regaliz, mango picante y algo que todavía no te podemos contar. Ven disfrazado y te llevas sticker.",
+      "family": "chocolate"
+    },
+    {
+      "slug": "taller-de-cucuruchos",
+      "title": "Taller de cucuruchos para peques",
+      "date": "2026-11-14",
+      "start": "12:00",
+      "end": "13:30",
+      "summary": "Hacemos barquillo, lo rellenamos y nos manchamos hasta las orejas. Plazas limitadas.",
+      "family": "cremas"
+    },
+    {
+      "slug": "estreno-turron",
+      "title": "Llega el turrón (oficialmente)",
+      "date": "2026-12-05",
+      "start": "17:00",
+      "end": "21:00",
+      "summary": "Tarrinas de turrón para llevar a la cena de empresa y quedar como un rey.",
+      "family": "cremas"
+    }
+  ]
+}

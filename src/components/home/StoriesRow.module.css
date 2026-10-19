@@ -1,0 +1,243 @@
+.row {
+  min-width: 0;
+}
+
+.list {
+  display: flex;
+  gap: var(--space-4);
+  margin: 0 calc(var(--space-4) * -1);
+  padding: var(--space-1) var(--space-4) var(--space-2);
+  overflow-x: auto;
+  list-style: none;
+  scrollbar-width: none;
+}
+
+.list::-webkit-scrollbar {
+  display: none;
+}
+
+/* relative: ancla el texto oculto (.visually-hidden) para que no ensanche la página. */
+.bubble {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  width: 104px;
+  padding: 0;
+  background: none;
+  border: 0;
+  color: var(--ink);
+}
+
+.bubble:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+.bubble:focus-visible .ring {
+  outline: var(--focus-width) solid var(--focus-color);
+  outline-offset: var(--focus-offset);
+  box-shadow: var(--focus-halo);
+}
+
+/* Anillo: neon-pink si no se ha visto; si ya se vio, desaparece. */
+.ring {
+  display: grid;
+  place-items: center;
+  padding: 3px;
+  border: var(--border-width) solid transparent;
+  border-radius: var(--radius-pill);
+}
+
+.unseen {
+  border-color: var(--neon-pink);
+}
+
+.circle {
+  display: grid;
+  place-items: center;
+  width: 72px;
+  height: 72px;
+  overflow: hidden;
+  border: var(--border);
+  border-radius: var(--radius-pill);
+  transition: transform var(--duration-base) var(--ease-out);
+}
+
+.bubble:hover .circle {
+  transform: scale(1.05);
+}
+
+.frutales {
+  background: var(--family-frutales);
+}
+
+.frutos-secos {
+  background: var(--family-frutos-secos);
+}
+
+.cremas {
+  background: var(--family-cremas);
+}
+
+.chocolate {
+  background: var(--family-chocolate);
+}
+
+.art {
+  width: 56%;
+}
+
+/* Hasta dos líneas: los nombres de las stories son cortos pero no tanto. */
+.label {
+  display: -webkit-box;
+  max-width: 100%;
+  overflow: hidden;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+}
+
+/* ── Visor ── */
+.viewer {
+  width: min(420px, calc(100vw - var(--space-4) * 2));
+  max-width: none;
+  height: min(720px, calc(100dvh - var(--space-4) * 2));
+  max-height: none;
+  margin: auto;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  overflow: visible;
+}
+
+.viewer::backdrop {
+  background: var(--chrome);
+  opacity: 0.9;
+}
+
+.frame {
+  --sticker-shadow: var(--shadow-sticker-on-color);
+  --focus-halo: var(--focus-halo-on-color);
+  --border: var(--border-on-color);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: var(--space-4);
+  color: var(--on-color);
+  border: var(--border-width) solid var(--on-color);
+  border-radius: var(--radius-scoop);
+  box-shadow: var(--shadow-sticker-lg);
+}
+
+.segments {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr);
+  gap: var(--space-1);
+}
+
+.segment {
+  height: 6px;
+  overflow: hidden;
+  background: var(--surface-raised);
+  border: 1px solid var(--on-color);
+  border-radius: var(--radius-pill);
+}
+
+.segmentFill {
+  display: block;
+  height: 100%;
+  background: var(--on-color);
+  transform-origin: left center;
+  transform: scaleX(var(--progress, 0));
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--space-2);
+}
+
+.topActions {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.iconButton {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  background: var(--surface-raised);
+  color: var(--ink);
+  border: var(--border-width) solid var(--on-color);
+  border-radius: var(--radius-pill);
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-6);
+  text-align: center;
+}
+
+.bigArt {
+  width: 40%;
+}
+
+.text {
+  max-width: 24ch;
+}
+
+.counter {
+  opacity: 0.8;
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.nav {
+  min-height: 44px;
+  padding: var(--space-2);
+  background: none;
+  border: 0;
+  color: var(--on-color);
+}
+
+.cta:focus-visible {
+  box-shadow: var(--focus-halo), var(--shadow-sticker-on-color);
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: var(--space-2) var(--space-4);
+  background: var(--neon-pink);
+  color: var(--on-color);
+  border: var(--border-width) solid var(--on-color);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-sticker-on-color);
+  text-decoration: none;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .list {
+    gap: var(--space-6);
+    margin: 0;
+    padding-inline: 0;
+  }
+}

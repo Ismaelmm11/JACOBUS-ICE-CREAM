@@ -1,0 +1,96 @@
+/* Ilustración placeholder: rellenos en pasteles, trazo on-color. */
+
+.svg {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+  --cream-fill: var(--pastel-vainilla);
+}
+
+.frutales {
+  --cream-fill: var(--pastel-fresa);
+}
+
+.frutos-secos {
+  --cream-fill: var(--pastel-pistacho);
+}
+
+.cremas {
+  --cream-fill: var(--pastel-vainilla);
+}
+
+.chocolate {
+  --cream-fill: var(--pastel-lavanda);
+}
+
+.cream,
+.cone,
+.cup,
+.band,
+.plate,
+.spoonHead,
+.sprinklePink,
+.sprinkleCyan {
+  stroke: var(--on-color);
+  stroke-width: 3;
+  stroke-linejoin: round;
+}
+
+.cream {
+  fill: var(--cream-fill);
+}
+
+.shine {
+  fill: none;
+  stroke: var(--surface-raised);
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+
+.sprinklePink,
+.sprinkleCyan {
+  stroke-width: 1.5;
+}
+
+.sprinklePink {
+  fill: var(--neon-pink);
+}
+
+.sprinkleCyan {
+  fill: var(--neon-cyan);
+}
+
+.cone {
+  fill: var(--pastel-vainilla);
+}
+
+.waffle {
+  fill: none;
+  stroke: var(--on-color);
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.cup {
+  fill: var(--surface-raised);
+}
+
+.band {
+  fill: var(--neon-pink);
+  stroke-width: 0;
+}
+
+.plate {
+  fill: var(--pastel-lavanda);
+}
+
+.spoon {
+  fill: none;
+  stroke: var(--on-color);
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+
+.spoonHead {
+  fill: var(--pastel-pistacho);
+}

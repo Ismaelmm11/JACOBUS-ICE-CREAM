@@ -1,0 +1,42 @@
+/* Cuadrícula con bordes ink: los bordes interiores salen del gap sobre fondo ink. */
+.bar {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--border-width);
+  background: var(--ink);
+  border: var(--border);
+  border-radius: var(--radius-scoop);
+  box-shadow: var(--shadow-sticker);
+  overflow: hidden;
+}
+
+.cell {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-1);
+  min-width: 0;
+  padding: var(--space-4);
+  background: var(--surface-raised);
+}
+
+.label {
+  color: var(--ink-muted);
+}
+
+.value {
+  color: var(--ink);
+  overflow-wrap: anywhere;
+}
+
+@media (min-width: 768px) {
+  .bar {
+    grid-template-columns: none;
+    grid-auto-columns: minmax(0, 1fr);
+    grid-auto-flow: column;
+  }
+
+  .cell {
+    padding: var(--space-4) var(--space-6);
+  }
+}

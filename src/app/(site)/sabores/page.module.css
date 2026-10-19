@@ -1,0 +1,105 @@
+.top {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  padding: 0;
+  list-style: none;
+}
+
+.jumpLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 40px;
+  padding: var(--space-1) var(--space-4);
+  background: var(--surface-raised);
+  color: var(--ink);
+  border: var(--border);
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+}
+
+.jumpLink:hover {
+  background: var(--surface);
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border: 2px solid var(--ink);
+  border-radius: var(--radius-pill);
+}
+
+.frutales {
+  background: var(--family-frutales);
+}
+
+.frutos-secos {
+  background: var(--family-frutos-secos);
+}
+
+.cremas {
+  background: var(--family-cremas);
+}
+
+.chocolate {
+  background: var(--family-chocolate);
+}
+
+.family {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.band {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6);
+  padding: var(--space-6);
+  color: var(--on-color);
+  border: var(--border);
+  border-radius: var(--radius-scoop);
+  box-shadow: var(--shadow-sticker);
+}
+
+.bandText {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  max-width: 56ch;
+}
+
+.bandArt {
+  flex: none;
+  width: 72px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: var(--space-6);
+  padding: 0;
+  list-style: none;
+}
+
+.more {
+  color: var(--ink-muted);
+}
+
+.more a {
+  color: var(--ink);
+}
+
+@media (min-width: 768px) {
+  .bandArt {
+    width: 112px;
+  }
+}

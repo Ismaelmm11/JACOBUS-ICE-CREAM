@@ -1,0 +1,29 @@
+.logo {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 44px;
+  color: inherit;
+  text-decoration: none;
+  font-family: var(--text-display-family);
+  font-weight: var(--text-display-weight);
+  line-height: var(--text-display-leading);
+}
+
+.word {
+  font-size: var(--text-logo-size);
+  letter-spacing: var(--text-display-tracking);
+}
+
+/* La segunda línea se estira hasta el ancho de JACOBUS con tracking amplio. */
+.sub {
+  font-size: var(--text-logo-sub-size);
+  letter-spacing: var(--text-logo-sub-tracking);
+  color: var(--neon-pink);
+}
+
+/* Sobre crema el neón no puede ser texto: la segunda línea pasa a ink. */
+.onSurface .sub {
+  color: var(--ink);
+}

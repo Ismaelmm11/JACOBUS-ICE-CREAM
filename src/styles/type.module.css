@@ -1,0 +1,67 @@
+/* Estilos tipográficos del sistema. Se aplican como clase: className={type.heading} */
+
+.display {
+  font-family: var(--text-display-family);
+  font-weight: var(--text-display-weight);
+  font-size: var(--text-display-size);
+  line-height: var(--text-display-leading);
+  letter-spacing: var(--text-display-tracking);
+}
+
+.heading {
+  font-family: var(--text-heading-family);
+  font-weight: var(--text-heading-weight);
+  font-size: var(--text-heading-size);
+  line-height: var(--text-heading-leading);
+  letter-spacing: var(--text-heading-tracking);
+}
+
+.title {
+  font-family: var(--text-title-family);
+  font-weight: var(--text-title-weight);
+  font-size: var(--text-title-size);
+  line-height: var(--text-title-leading);
+  letter-spacing: var(--text-title-tracking);
+}
+
+.body {
+  font-family: var(--text-body-family);
+  font-weight: var(--text-body-weight);
+  font-size: var(--text-body-size);
+  line-height: var(--text-body-leading);
+}
+
+.bodyStrong {
+  font-family: var(--text-body-family);
+  font-weight: var(--text-body-strong-weight);
+  font-size: var(--text-body-size);
+  line-height: var(--text-body-leading);
+}
+
+.label {
+  font-family: var(--text-label-family);
+  font-weight: var(--text-label-weight);
+  font-size: var(--text-label-size);
+  line-height: var(--text-label-leading);
+  letter-spacing: var(--text-label-tracking);
+  text-transform: uppercase;
+}
+
+.price {
+  font-family: var(--text-price-family);
+  font-weight: var(--text-price-weight);
+  font-size: var(--text-price-size);
+  line-height: var(--text-price-leading);
+  font-variant-numeric: tabular-nums;
+}
+
+.sticker {
+  font-family: var(--text-sticker-family);
+  font-weight: var(--text-sticker-weight);
+  font-size: var(--text-sticker-size);
+  line-height: var(--text-sticker-leading);
+}
+
+.muted {
+  color: var(--ink-muted);
+}
