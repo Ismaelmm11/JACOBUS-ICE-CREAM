@@ -73,7 +73,20 @@ export function ProgressCarousel({
   }
 
   return (
-    <section className={cx(styles.carousel, className)} aria-roledescription="carrusel" aria-label={label}>
+    <section
+      className={cx(styles.carousel, className)}
+      aria-roledescription="carrusel"
+      aria-label={label}
+      // Con el foco dentro no avanza solo: nadie quiere que la historia cambie mientras tabula.
+      onFocus={() => {
+        if (playing) swiperRef.current?.autoplay.pause();
+      }}
+      onBlur={(event) => {
+        if (playing && !event.currentTarget.contains(event.relatedTarget as Node | null)) {
+          swiperRef.current?.autoplay.resume();
+        }
+      }}
+    >
       <Swiper
         modules={[A11y, Autoplay, Keyboard]}
         slidesPerView={1}
@@ -133,6 +146,7 @@ export function ProgressCarousel({
                   type="button"
                   className={cx(styles.barButton, index === active && styles.barActive)}
                   aria-current={index === active ? "true" : undefined}
+                  aria-label={`Ir a la historia ${index + 1}: ${slide.kicker}`}
                   onClick={() => swiperRef.current?.slideTo(index)}
                 >
                   <span
@@ -143,10 +157,7 @@ export function ProgressCarousel({
                     style={{ "--progress": state } as CSSProperties}
                     aria-hidden="true"
                   />
-                  <span className={cx(styles.barLabel, tx.label)}>
-                    <span className="visually-hidden">Ir a la historia {index + 1}: </span>
-                    {slide.kicker}
-                  </span>
+                  <span className={cx(styles.barLabel, tx.label)}>{slide.kicker}</span>
                 </button>
               </li>
             );

@@ -16,13 +16,15 @@
 }
 
 .slide {
+  --focus-halo: var(--focus-halo-on-color);
+  --border: var(--border-on-color);
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   gap: var(--space-4);
   height: 100%;
   padding: var(--space-6);
   color: var(--on-color);
-  border: var(--border);
+  border: var(--border-width) solid var(--ink);
   border-radius: var(--radius-scoop);
   box-shadow: var(--shadow-sticker);
 }
@@ -75,6 +77,10 @@
   border-radius: var(--radius-pill);
   box-shadow: var(--shadow-sticker-on-color);
   text-decoration: none;
+}
+
+.cta:focus-visible {
+  box-shadow: var(--focus-halo), var(--shadow-sticker-on-color);
 }
 
 .cta:active {

@@ -1,6 +1,8 @@
 /* ── Hero en pastel de familia ── */
 .hero {
   --button-shadow: var(--shadow-sticker-on-color);
+  --focus-halo: var(--focus-halo-on-color);
+  --border: var(--border-on-color);
   color: var(--on-color);
   border-bottom: var(--border-width) solid var(--on-color);
 }

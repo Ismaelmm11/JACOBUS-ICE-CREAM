@@ -63,20 +63,14 @@ export function Ticker({ days, label = "En la vitrina hoy", className }: TickerP
                   <Link
                     href={item.href}
                     className={cx(styles.card, item.status === "agotado" && styles.soldOut)}
-                    aria-label={[
-                      item.name,
-                      FAMILY_LABELS[item.family],
-                      formatPrice(item.price),
-                      item.status !== "disponible" ? STOCK_LABELS[item.status] : null,
-                    ]
-                      .filter(Boolean)
-                      .join(", ")}
                   >
+                    {/* El nombre va primero en el DOM (es lo que se lee primero);
+                        la familia se pinta encima con order. */}
+                    <span className={cx(styles.name, tx.bodyStrong)}>{item.name}</span>
                     <span className={cx(styles.meta, tx.label)}>
                       <span className={cx(styles.dot, styles[item.family])} aria-hidden="true" />
                       {FAMILY_LABELS[item.family]}
                     </span>
-                    <span className={cx(styles.name, tx.bodyStrong)}>{item.name}</span>
                     <span className={styles.bottom}>
                       <span className={cx(styles.price, tx.price)}>{formatPrice(item.price)}</span>
                       {item.status !== "disponible" ? (

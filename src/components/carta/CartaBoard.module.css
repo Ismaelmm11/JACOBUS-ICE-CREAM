@@ -57,6 +57,7 @@
 }
 
 .day {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -79,6 +80,10 @@
   color: var(--on-color);
   border-color: var(--on-color);
   box-shadow: var(--shadow-sticker-on-color);
+}
+
+.day:focus-visible {
+  box-shadow: var(--focus-halo);
 }
 
 .dayNumber {

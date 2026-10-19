@@ -5,6 +5,8 @@
 }
 
 .filters {
+  --focus-halo: var(--focus-halo-on-color);
+  --border: var(--border-on-color);
   display: flex;
   flex-direction: column;
   gap: var(--space-4);

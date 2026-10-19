@@ -41,8 +41,8 @@
 }
 
 .tab:focus-visible {
-  outline-offset: calc(var(--focus-offset) * -1);
-  box-shadow: none;
+  outline-offset: calc(var(--focus-width) * -1);
+  box-shadow: var(--focus-halo-inset);
 }
 
 .panel {

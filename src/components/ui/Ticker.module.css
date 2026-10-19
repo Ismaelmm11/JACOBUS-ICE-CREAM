@@ -64,10 +64,11 @@
 
 .card:focus-visible {
   outline-offset: calc(var(--focus-width) * -1);
-  box-shadow: none;
+  box-shadow: var(--focus-halo-inset);
 }
 
 .meta {
+  order: -1;
   display: flex;
   align-items: center;
   gap: var(--space-1);
@@ -166,7 +167,7 @@
 
 .arrow:focus-visible {
   outline-offset: calc(var(--focus-width) * -1);
-  box-shadow: none;
+  box-shadow: var(--focus-halo-inset);
 }
 
 @media (min-width: 768px) {

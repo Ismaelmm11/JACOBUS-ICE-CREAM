@@ -101,14 +101,15 @@ export function CartaBoard({ days, flavors }: CartaBoardProps) {
                   type="button"
                   className={cx(styles.day, isSelected && styles.daySelected, !day.open && styles.dayClosed)}
                   aria-pressed={isSelected}
-                  aria-label={`${longFmt.format(toDate(day.iso))}${day.open ? "" : ", cerrado"}`}
                   onClick={() => setSelectedIso(day.iso)}
                 >
+                  {/* El nombre accesible empieza por lo visible (2.5.3) y acaba con la fecha completa. */}
                   <span className={tx.label}>{dayName(day)}</span>
                   <span className={cx(styles.dayNumber, tx.title)}>{toDate(day.iso).getUTCDate()}</span>
                   <span className={cx(styles.dayMeta, tx.label)}>
                     {day.open ? `${day.entries.length} sab.` : "Cerrado"}
                   </span>
+                  <span className="visually-hidden">: {longFmt.format(toDate(day.iso))}</span>
                 </button>
               </li>
             );

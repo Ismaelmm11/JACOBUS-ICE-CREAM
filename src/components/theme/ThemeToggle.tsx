@@ -34,17 +34,18 @@ export function ThemeToggle({ className }: { className?: string }) {
   }
 
   return (
+    // Interruptor «Noche»: la etiqueta visible no cambia (2.5.3) y el estado lo da aria-checked.
     <button
       type="button"
+      role="switch"
+      aria-checked={isNoche}
       className={cx(styles.toggle, tx.label, className)}
       onClick={toggle}
-      aria-pressed={theme === null ? undefined : isNoche}
-      aria-label="Tema noche"
     >
       <span className={styles.track} aria-hidden="true">
         <span className={cx(styles.thumb, isNoche && styles.thumbOn)} />
       </span>
-      <span aria-hidden="true">{theme === null ? "Tema" : isNoche ? "Noche" : "Crema"}</span>
+      Noche
     </button>
   );
 }

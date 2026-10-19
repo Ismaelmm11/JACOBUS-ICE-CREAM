@@ -1,5 +1,7 @@
 .strip {
   --button-shadow: var(--shadow-sticker-on-color);
+  --focus-halo: var(--focus-halo-on-color);
+  --border: var(--border-on-color);
   --sticker-shadow: var(--shadow-sticker-on-color);
   display: flex;
   flex-direction: column;

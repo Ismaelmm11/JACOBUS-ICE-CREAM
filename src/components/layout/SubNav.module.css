@@ -60,7 +60,7 @@
 
 .tab:focus-visible {
   outline-offset: calc(var(--focus-width) * -1);
-  box-shadow: none;
+  box-shadow: var(--focus-halo-inset);
 }
 
 @media (min-width: 768px) {

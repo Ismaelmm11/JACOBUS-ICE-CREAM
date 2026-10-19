@@ -91,6 +91,7 @@
   outline: var(--focus-width) solid var(--focus-color);
   outline-offset: var(--focus-offset);
   border-radius: var(--radius-scoop);
+  box-shadow: var(--focus-halo);
 }
 
 .excerpt {
